@@ -25,9 +25,6 @@ function App() {
         <li class="nav-item">
           <a class="nav-link" href="/random">Random</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pricing">Pricing</a>
-        </li>
       </ul>
     </div>
   </div>
