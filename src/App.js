@@ -30,8 +30,6 @@ function App() {
   </div>
 </nav>
       <h1>My Board Games</h1>
-      <Link to="/" className="btn-link me-3">Home</Link>
-      <Link to="random" >Random</Link>
       <Routes>
         <Route path="/" element={<HomePage gamesList={gamesList} />} />
         <Route path="/random" element={<RandomPage gamesList={gamesList} />} />
