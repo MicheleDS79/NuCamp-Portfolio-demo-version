@@ -1,4 +1,5 @@
 
+
 function GameCard(props) {
     return (
         <div className="bg-light border p-4 m-2">
@@ -9,4 +10,4 @@ function GameCard(props) {
     )
 }
 
-export default GameCard
+export default GameCard;

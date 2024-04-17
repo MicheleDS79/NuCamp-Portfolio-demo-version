@@ -1,31 +1,27 @@
-import GameCard from "./GameCard";
+import { useState } from "react";
+import { TEST_GAMES } from "./components/TEST_GAMES";
+import HomePage from "./components/HomePage";
+import RandomPage from "./components/RandomPage";
+import { Link, Route, Routes } from "react-router-dom";
 
-const gamesList = [ // This format is strictly an example from the Video - Compile your own!
-  {
-    id: 0,
-    name: "Scythe",
-    rating: null,
-    category: "Fun"
-  },
-  {
-    id: 0,
-    name: "Machi Koro",
-    rating: null,
-    category: "Fun"
-  },
-  {
-    id: 0,
-    name: "Galaxy Trucker",
-    rating: null,
-    category: "Fun"
-  },
-]
 
 function App() {
+  const [gamesList, setGamesList] = useState( TEST_GAMES )
+  
   return (
     <div>
       <h1>My Board Games</h1>
-      { gamesList.map( g => <GameCard game={g} />)}
+      <Link to="/" className="btn-link me-3">Home</Link>
+      <Link to="random" >Random</Link>
+      <Routes>
+        <Route path="/" element={ <HomePage gamesList={gamesList}/> } />
+       <Route path="/random" element={  <RandomPage gamesList={gamesList}/> }/>
+      </Routes>
+     
+
+    
+
+     
     </div>
   );
 }
